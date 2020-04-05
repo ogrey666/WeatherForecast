@@ -1,5 +1,6 @@
 package com.example.kurs.SerwerPogodynkowy.config;
 
+import com.example.kurs.SerwerPogodynkowy.repository.ForecastRepository;
 import com.example.kurs.SerwerPogodynkowy.service.ForecastService;
 import com.example.kurs.SerwerPogodynkowy.service.Forecaster;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,7 +16,7 @@ public class BeanConfiguration {
     private String[] region;
 
     @Bean
-    public ForecastService forecastService() {
-        return new Forecaster(region);
+    public ForecastService forecastService(ForecastRepository forecastRepository) {
+        return new Forecaster(region, forecastRepository);
     }
 }

@@ -1,7 +1,9 @@
 package com.example.kurs.SerwerPogodynkowy.service;
 
+import com.example.kurs.SerwerPogodynkowy.transport.ForecastDTO;
+
 public interface ForecastService {
-    Forecast getForecast(Integer region, Integer aura);
-    Forecast getForecast(Integer region);
-    Forecast getForecast();
+    ForecastDTO getForecast(Integer region, Integer aura);
+    ForecastDTO getForecast(Integer region);
+    ForecastDTO getForecast();
 }

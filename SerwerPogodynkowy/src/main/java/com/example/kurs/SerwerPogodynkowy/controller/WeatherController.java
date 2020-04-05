@@ -1,8 +1,7 @@
 package com.example.kurs.SerwerPogodynkowy.controller;
 
-import com.example.kurs.SerwerPogodynkowy.service.Forecast;
+import com.example.kurs.SerwerPogodynkowy.transport.ForecastDTO;
 import com.example.kurs.SerwerPogodynkowy.service.ForecastService;
-import com.example.kurs.SerwerPogodynkowy.service.Forecaster;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +21,7 @@ public class WeatherController {
 
     // API Endpoint
     @GetMapping(path = "WeatherForecast")
-    public Forecast getForecast(
+    public ForecastDTO getForecast(
         // Paramsspr
         @RequestParam(value = "region", required = false) Integer region, // voivodeship
         @RequestParam(value = "aura", required = false) Integer aura // PM 2.5 AQI

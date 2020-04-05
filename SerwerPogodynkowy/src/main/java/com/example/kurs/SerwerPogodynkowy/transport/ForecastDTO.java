@@ -1,15 +1,15 @@
-package com.example.kurs.SerwerPogodynkowy.service;
+package com.example.kurs.SerwerPogodynkowy.transport;
 
 /*
     Obiekt zwracany przez endpointy
  */
-public class Forecast {
+public class ForecastDTO {
 
     String region;
     Integer aura;
     String description;
 
-    public Forecast(String region, Integer aura) {
+    public ForecastDTO(String region, Integer aura) {
         this.region = region;
         this.aura = aura;
     }
