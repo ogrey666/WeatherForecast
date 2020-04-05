@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5898b6e1-e8b6-4ca4-8768-b86893f2cbfd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/model/ForecastEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/repository/ForecastRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SerwerPogodynkowy/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SerwerPogodynkowy/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/config/BeanConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/config/BeanConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/controller/WeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/controller/WeatherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/service/Forecast.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/transport/ForecastDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/repository/ForecastRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/repository/ForecastRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/service/ForecastService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/service/ForecastService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/service/Forecaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/service/Forecaster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

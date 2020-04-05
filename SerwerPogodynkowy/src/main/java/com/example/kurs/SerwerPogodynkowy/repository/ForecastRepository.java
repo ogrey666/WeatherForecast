@@ -4,6 +4,9 @@ import com.example.kurs.SerwerPogodynkowy.model.ForecastEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Collection;
+
 @Repository
 public interface ForecastRepository extends CrudRepository<ForecastEntity, Long> {
+    Collection<ForecastEntity> findAll();
 }
