@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f755f88-a474-4fe7-9f8b-848ff2b82fb7" name="Default Changelist" comment="" />
+    <list default="true" id="5898b6e1-e8b6-4ca4-8768-b86893f2cbfd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kurs/SerwisKlienckiPogodynkowy/config/WeatherGatewayConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/kurs/SerwisKlienckiPogodynkowy/config/WeatherGatewayConfig.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
-  <component name="ProjectId" id="1Zyqy0CzJ7rdWXSUPjN0vfAs6Nl" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Zyr3KpNB603yIe4qOLLAf36Vap" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -19,30 +35,82 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/SerwisKlienckiPogodynkowy/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../jpa" />
+  </component>
+  <component name="RunManager">
+    <configuration name="SerwisKlienckiPogodynkowyApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.kurs.SerwisKlienckiPogodynkowy.SerwisKlienckiPogodynkowyApplication" />
+      <module name="SerwisKlienckiPogodynkowy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.kurs.SerwisKlienckiPogodynkowy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SerwisKlienckiPogodynkowyApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9f755f88-a474-4fe7-9f8b-848ff2b82fb7" name="Default Changelist" comment="" />
-      <created>1585821931402</created>
+      <changelist id="5898b6e1-e8b6-4ca4-8768-b86893f2cbfd" name="Default Changelist" comment="" />
+      <created>1585821974213</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1585821931402</updated>
+      <updated>1585821974213</updated>
     </task>
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="595" y="298" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1585821960087">
+    <state x="142" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1586028973820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="595" y="298" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585821960087" />
-    <state x="499" y="114" key="FileChooserDialogImpl" timestamp="1586074418844">
+    <state x="530" y="33" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585824793944" />
+    <state x="142" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586028973820" />
+    <state x="436" y="104" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586027693866">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="114" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1586074418844" />
-    <state x="499" y="114" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586024663649" />
+    <state x="436" y="104" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586027693866" />
+    <state x="499" y="114" key="FileChooserDialogImpl" timestamp="1586078110610">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="114" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1586078110610" />
+    <state width="1480" height="166" key="GridCell.Tab.0.bottom" timestamp="1586078999760">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1480" height="166" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1586078999760" />
+    <state width="1864" height="359" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586076935795" />
+    <state width="1480" height="183" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586039706187" />
+    <state width="1480" height="166" key="GridCell.Tab.0.center" timestamp="1586078999760">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1480" height="166" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1586078999760" />
+    <state width="1864" height="359" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586076935794" />
+    <state width="1480" height="183" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586039706187" />
+    <state width="1480" height="166" key="GridCell.Tab.0.left" timestamp="1586078999760">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1480" height="166" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1586078999760" />
+    <state width="1864" height="359" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586076935794" />
+    <state width="1480" height="183" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586039706187" />
+    <state width="1480" height="166" key="GridCell.Tab.0.right" timestamp="1586078999760">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1480" height="166" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1586078999760" />
+    <state width="1864" height="359" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586076935885" />
+    <state width="1480" height="183" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586039706187" />
+    <state x="347" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1585822063703">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="347" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585822063703" />
   </component>
 </project>
