@@ -21,34 +21,37 @@ public class WeatherGateway {
 
     public WeatherDTO getWeatherForecast(Integer regionId, Integer aura) {
         HashMap<String, String> requestParams = new HashMap<>();
-        requestParams.put("region", String.valueOf(regionId));
-        requestParams.put("aura", String.valueOf(aura));
+        if (regionId != null) {
+            requestParams.put("region", String.valueOf(regionId));
+        }
+        if (aura != null) {
+            requestParams.put("aura", String.valueOf(aura));
+        }
 
-        System.out.println(url + getUriParamsPlaceholderAsString(requestParams));
+        // UriComponentsBuilder - lepsze do wykorzystania, gotowiec do budowania parametrow :)
+        // ja sie bawie, wiec korzystam sam
         return restTemplate.getForObject(
-                url + getUriParamsPlaceholderAsString(requestParams),
-                //"?region={region}&aura={aura}",
+                url
+                + getUriParamsPlaceholderAsString(requestParams),  //+ "?region={region}&aura={aura}",
                 WeatherDTO.class,
                 requestParams);
     }
 
     // zbuduj paramsy do urla
-
     private String includeParamPlaceholder(String paramName) {
         return paramName + "={" + paramName + "}";
     }
 
     private String getUriParamsPlaceholderAsString(Map<String, String> params) {
         String uriParamsAsString = "";
-        boolean isFirstNonEmptyParam = false;
+        boolean isFirstParam = true;
         for (Map.Entry<String, String> entry : params.entrySet()) {
-            if (entry.getValue() != null) {
-                if (!isFirstNonEmptyParam) {
-                    uriParamsAsString = "?";
-                    isFirstNonEmptyParam = true;
+                if (isFirstParam) {
+                    isFirstParam = false;
+                    uriParamsAsString = "?" + includeParamPlaceholder(entry.getKey());
+                    continue;
                 }
-                uriParamsAsString = uriParamsAsString + includeParamPlaceholder(entry.getKey());
-            }
+                uriParamsAsString = uriParamsAsString + "&" + includeParamPlaceholder(entry.getKey());
         }
         return uriParamsAsString;
     }
