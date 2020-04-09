@@ -64,7 +64,7 @@ public class WeatherController {
     }
 
     @PostMapping(
-            path = "/forecast/{id}/update",
+            path = "/forecast/{id}",
             consumes = "application/json",
             produces = "application/json"
     )

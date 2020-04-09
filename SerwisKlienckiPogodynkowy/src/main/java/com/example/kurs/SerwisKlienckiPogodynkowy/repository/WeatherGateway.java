@@ -66,7 +66,7 @@ public class WeatherGateway {
         HttpEntity<String> request = new HttpEntity<>(forecastJsonObject.toString(), headers);
         // Run
         return restTemplate.postForObject(
-                serverUrl + "/forecast/{id}/update",
+                serverUrl + "/forecast/{id}",
                 request,
                 WeatherDTO.class,
                 forecastId
