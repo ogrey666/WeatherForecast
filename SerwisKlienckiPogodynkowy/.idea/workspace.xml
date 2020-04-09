@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5898b6e1-e8b6-4ca4-8768-b86893f2cbfd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/config/BeanConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/config/BeanConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/controller/WeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/controller/WeatherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/repository/ForecastRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/repository/ForecastRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/service/ForecastService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/service/ForecastService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/service/Forecaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SerwerPogodynkowy/src/main/java/com/example/kurs/SerwerPogodynkowy/service/Forecaster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kurs/SerwisKlienckiPogodynkowy/controller/WeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/kurs/SerwisKlienckiPogodynkowy/controller/WeatherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kurs/SerwisKlienckiPogodynkowy/repository/WeatherGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/kurs/SerwisKlienckiPogodynkowy/repository/WeatherGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kurs/SerwisKlienckiPogodynkowy/service/WeatherForecastService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/kurs/SerwisKlienckiPogodynkowy/service/WeatherForecastService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +43,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SerwerPogodynkowy/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
@@ -91,33 +94,34 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="436" y="104" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586027693866" />
-    <state x="499" y="114" key="FileChooserDialogImpl" timestamp="1586422872727">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2544" y="144" key="FileChooserDialogImpl" timestamp="1586438580877">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="499" y="114" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1586422872727" />
-    <state width="1480" height="166" key="GridCell.Tab.0.bottom" timestamp="1586078999760">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2544" y="144" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586438580877" />
+    <state width="1864" height="201" key="GridCell.Tab.0.bottom" timestamp="1586438930903">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1480" height="166" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1586078999760" />
-    <state width="1864" height="359" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586076935795" />
+    <state width="1864" height="201" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586438930903" />
     <state width="1480" height="183" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586039706187" />
-    <state width="1480" height="166" key="GridCell.Tab.0.center" timestamp="1586078999760">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1864" height="201" key="GridCell.Tab.0.center" timestamp="1586438930902">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1480" height="166" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1586078999760" />
-    <state width="1864" height="359" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586076935794" />
+    <state width="1864" height="201" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586438930902" />
     <state width="1480" height="183" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586039706187" />
-    <state width="1480" height="166" key="GridCell.Tab.0.left" timestamp="1586078999760">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1864" height="201" key="GridCell.Tab.0.left" timestamp="1586438930902">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1480" height="166" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1586078999760" />
-    <state width="1864" height="359" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586076935794" />
+    <state width="1864" height="201" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586438930902" />
     <state width="1480" height="183" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586039706187" />
-    <state width="1480" height="166" key="GridCell.Tab.0.right" timestamp="1586078999760">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1864" height="201" key="GridCell.Tab.0.right" timestamp="1586438930903">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1480" height="166" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1586078999760" />
-    <state width="1864" height="359" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586076935885" />
+    <state width="1864" height="201" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586438930903" />
     <state width="1480" height="183" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586039706187" />
     <state x="2275" y="78" key="SettingsEditor" timestamp="1586083447385">
       <screen x="1920" y="0" width="1920" height="1040" />

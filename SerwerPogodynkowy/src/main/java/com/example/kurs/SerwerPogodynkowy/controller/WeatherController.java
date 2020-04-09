@@ -5,7 +5,6 @@ import com.example.kurs.SerwerPogodynkowy.transport.ForecastDTO;
 import com.example.kurs.SerwerPogodynkowy.service.ForecastService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -54,13 +53,13 @@ public class WeatherController {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Aura param can't go below 0");
         }
         if (region != null && aura != null) {
-            return forecastService.getAllSavedForecasts(region, aura);
+            return forecastService.getSavedForecasts(region, aura);
         } else if (region != null) {
-            return forecastService.getAllSavedForecastsForRegion(region);
+            return forecastService.getSavedForecastsForRegion(region);
         } else if (aura != null) {
-            return forecastService.getAllSavedForecastsForAura(aura);
+            return forecastService.getSavedForecastsForAura(aura);
         } else {
-            return forecastService.getAllSavedForecasts();
+            return forecastService.getSavedForecasts();
         }
     }
 

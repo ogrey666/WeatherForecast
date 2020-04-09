@@ -58,22 +58,22 @@ public class Forecaster implements ForecastService{
     }
 
     @Override
-    public Collection<ForecastDTO> getAllSavedForecasts(Integer region, Integer aura) {
+    public Collection<ForecastDTO> getSavedForecasts(Integer region, Integer aura) {
         return forecastRepository.findByRegionAndAura(getRegionName(region), aura).stream().map(this::convertToDTO).collect(Collectors.toList());
     }
 
     @Override
-    public Collection<ForecastDTO> getAllSavedForecastsForRegion(Integer region) {
+    public Collection<ForecastDTO> getSavedForecastsForRegion(Integer region) {
         return forecastRepository.findByRegion(getRegionName(region)).stream().map(this::convertToDTO).collect(Collectors.toList());
     }
 
     @Override
-    public Collection<ForecastDTO> getAllSavedForecastsForAura(Integer aura) {
+    public Collection<ForecastDTO> getSavedForecastsForAura(Integer aura) {
         return forecastRepository.findByAura(aura).stream().map(this::convertToDTO).collect(Collectors.toList());
     }
 
     @Override
-    public Collection<ForecastDTO> getAllSavedForecasts() {
+    public Collection<ForecastDTO> getSavedForecasts() {
         return forecastRepository.findAll().stream().map(this::convertToDTO).collect(Collectors.toList());
     }
 
