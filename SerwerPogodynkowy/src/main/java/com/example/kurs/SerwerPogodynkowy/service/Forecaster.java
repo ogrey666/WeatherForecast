@@ -3,16 +3,19 @@ package com.example.kurs.SerwerPogodynkowy.service;
 import com.example.kurs.SerwerPogodynkowy.model.ForecastEntity;
 import com.example.kurs.SerwerPogodynkowy.repository.ForecastRepository;
 import com.example.kurs.SerwerPogodynkowy.transport.ForecastDTO;
+import javassist.NotFoundException;
+import org.omg.CosNaming.NamingContextPackage.NotFound;
 
 import java.text.ParseException;
 import java.util.Collection;
+import java.util.Optional;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Forecaster implements ForecastService{
     private String[] regionArray;
-    private Integer auraRandomUpperBound = 650;
+    private static final Integer auraRandomUpperBound = 650;
     private ForecastRepository forecastRepository;
 
     public Forecaster(String[] regionArray, ForecastRepository forecastRepository) {
@@ -33,9 +36,8 @@ public class Forecaster implements ForecastService{
 
     @Override
     public ForecastDTO getForecast(Integer region, Integer aura) {
-        String regionDesc = regionArray[region];
         // zapis do db
-        ForecastEntity forecastEntity = new ForecastEntity(regionDesc, aura);
+        ForecastEntity forecastEntity = new ForecastEntity(getRegionName(region), aura);
         forecastRepository.save(forecastEntity);
         // koniec zapisu
         return convertToDTO(forecastEntity);
@@ -43,20 +45,31 @@ public class Forecaster implements ForecastService{
 
     @Override
     public ForecastDTO getForecast(Integer region) {
-        String regionDesc = regionArray[region];
-        Integer aura = getRandomInt(auraRandomUpperBound);
-        ForecastEntity forecastEntity = new ForecastEntity(regionDesc, aura);
+        ForecastEntity forecastEntity = new ForecastEntity(getRegionName(region), getRandomInt(auraRandomUpperBound));
         forecastRepository.save(forecastEntity);
         return convertToDTO(forecastEntity);
     }
 
     @Override
     public ForecastDTO getForecast() {
-        String regionDesc = regionArray[getRandomInt(regionArray.length)];
-        Integer aura = getRandomInt(auraRandomUpperBound);
-        ForecastEntity forecastEntity = new ForecastEntity(regionDesc, aura);
+        ForecastEntity forecastEntity = new ForecastEntity(getRegionName(getRandomInt(regionArray.length)), getRandomInt(auraRandomUpperBound));
         forecastRepository.save(forecastEntity);
         return convertToDTO(forecastEntity);
+    }
+
+    @Override
+    public Collection<ForecastDTO> getAllSavedForecasts(Integer region, Integer aura) {
+        return forecastRepository.findByRegionAndAura(getRegionName(region), aura).stream().map(this::convertToDTO).collect(Collectors.toList());
+    }
+
+    @Override
+    public Collection<ForecastDTO> getAllSavedForecastsForRegion(Integer region) {
+        return forecastRepository.findByRegion(getRegionName(region)).stream().map(this::convertToDTO).collect(Collectors.toList());
+    }
+
+    @Override
+    public Collection<ForecastDTO> getAllSavedForecastsForAura(Integer aura) {
+        return forecastRepository.findByAura(aura).stream().map(this::convertToDTO).collect(Collectors.toList());
     }
 
     @Override
@@ -64,10 +77,20 @@ public class Forecaster implements ForecastService{
         return forecastRepository.findAll().stream().map(this::convertToDTO).collect(Collectors.toList());
     }
 
+    @Override
+    public ForecastDTO updateForecast(Long forecastId, ForecastEntity forecastEntity) {
+        forecastRepository.updateForecastAura(forecastId, forecastEntity.getAura());
+        return convertToDTO(forecastRepository.findById(forecastId).get());
+    }
+
     private static int getRandomInt(int upperBound) {
         // statyczna metoda klasy ThreadLocalRandom - upperBound jest non-exclusive a wiec ponizej mamy 0 <= X < upperBound
         int randomInt = ThreadLocalRandom.current().nextInt(0, upperBound);
         return randomInt;
+    }
+
+    private String getRegionName(Integer regionID) {
+        return regionArray[regionID];
     }
 
 }

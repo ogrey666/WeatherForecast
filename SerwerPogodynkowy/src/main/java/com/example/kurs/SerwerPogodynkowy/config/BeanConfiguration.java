@@ -3,7 +3,6 @@ package com.example.kurs.SerwerPogodynkowy.config;
 import com.example.kurs.SerwerPogodynkowy.repository.ForecastRepository;
 import com.example.kurs.SerwerPogodynkowy.service.ForecastService;
 import com.example.kurs.SerwerPogodynkowy.service.Forecaster;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

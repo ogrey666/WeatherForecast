@@ -1,14 +1,12 @@
 package com.example.kurs.SerwerPogodynkowy.controller;
 
+import com.example.kurs.SerwerPogodynkowy.model.ForecastEntity;
 import com.example.kurs.SerwerPogodynkowy.transport.ForecastDTO;
 import com.example.kurs.SerwerPogodynkowy.service.ForecastService;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Collection;
@@ -25,9 +23,9 @@ public class WeatherController {
 
 
     // API Endpoint
-    @GetMapping(path = "WeatherForecast")
+    @GetMapping(path = "/forecast/generate")
     public ForecastDTO getForecast(
-        // Paramsspr
+        // Params
         @RequestParam(value = "region", required = false) Integer region, // voivodeship
         @RequestParam(value = "aura", required = false) Integer aura // PM 2.5 AQI
     ) {
@@ -46,9 +44,42 @@ public class WeatherController {
         }
     }
 
-    @GetMapping(path = "getAllSavedForecasts")
-    public Collection<ForecastDTO> getAllSavedForecasts() {
-        return forecastService.getAllSavedForecasts();
+    @GetMapping(path = "/forecasts")
+    public Collection<ForecastDTO> getAllSavedForecasts(
+            @RequestParam(value = "region", required = false) Integer region, // voivodeship
+            @RequestParam(value = "aura", required = false) Integer aura // PM 2.5 AQI
+    ) {
+        // Endpoint body
+        if (aura != null && aura < 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Aura param can't go below 0");
+        }
+        if (region != null && aura != null) {
+            return forecastService.getAllSavedForecasts(region, aura);
+        } else if (region != null) {
+            return forecastService.getAllSavedForecastsForRegion(region);
+        } else if (aura != null) {
+            return forecastService.getAllSavedForecastsForAura(aura);
+        } else {
+            return forecastService.getAllSavedForecasts();
+        }
+    }
+
+    @PostMapping(
+            path = "/forecast/{id}/update",
+            consumes = "application/json",
+            produces = "application/json"
+    )
+    public ForecastDTO updateForecast(
+            @PathVariable Long id,
+            @RequestBody ForecastEntity forecastEntity
+            ) {
+        if (forecastEntity.getAura() == null) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Provide aura param");
+        }
+        if (forecastEntity.getAura() != null && forecastEntity.getAura() < 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Aura param can't go below 0");
+        }
+        return forecastService.updateForecast(id, forecastEntity);
     }
 
 }
